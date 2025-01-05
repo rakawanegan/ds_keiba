@@ -11,7 +11,7 @@ import os
 BASE_URL = "https://db.netkeiba.com"
 TARGET_YEAR = 2024
 TARGET_TRACKS = "京都"  # 対象競馬場
-SEASONS = range(6, 9)   # 季節条件
+SEASONS = range(1, 13)   # 季節条件
 LOG_FILE = "scraping.log"
 OUTPUT_DIR = "race_data"  # データ保存先
 HEADERS = {
