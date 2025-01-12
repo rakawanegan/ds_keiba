@@ -1,3 +1,4 @@
 *.log
 race_data/
 outputs/
+data
