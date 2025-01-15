@@ -220,5 +220,14 @@ def main():
     # 血統データを取得
     scrape_peds(horse_id_list)
 
+
+def continue_main():
+    """続きから実行"""
+    horce_id_list = [os.path.basename(f).split("_")[2].split(".")[0] for f in os.listdir(OUTPUT_DIR) if "horse_results" in f]
+    current_horce_id_list = [os.path.basename(f).split("_")[1].split(".")[0] for f in os.listdir(OUTPUT_DIR) if "peds" in f]
+    horce_id_list = list(set(horce_id_list) - set(current_horce_id_list))
+    scrape_peds(horce_id_list)
+
 if __name__ == "__main__":
-    main()
+    # main()
+    continue_main()
